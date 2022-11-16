@@ -3,7 +3,6 @@ const {
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
 } = require("./verifyToken");
-const CryptoJS = require("crypto-js");
 const Product = require("../models/Product");
 
 //CREATE
