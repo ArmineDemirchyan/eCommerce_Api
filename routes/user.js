@@ -48,4 +48,16 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+
+//GET ALL USERS
+router.get("/", verifyTokenAndAdmin, async (req, res) => {
+    const query = req.query.new;
+    try {
+      const users = query ? await User.find().select("-password").sort({_id:-1}).limit(1) : await User.find().select("-password");
+      res.status(200).json(users);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  });
 module.exports = router;
