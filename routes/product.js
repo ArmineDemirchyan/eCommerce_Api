@@ -6,7 +6,7 @@ const {
 const Product = require("../models/Product");
 
 //CREATE
-router.post("/", verifyTokenAndAdmin, async (req, res) => {
+router.post("/add", verifyTokenAndAdmin, async (req, res) => {
   const newProduct = new Product(req.body);
 
   try {
@@ -18,7 +18,7 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //UPDATE
-router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
+router.put("/update/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
