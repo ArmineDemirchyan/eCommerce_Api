@@ -6,7 +6,7 @@ const {
 const Product = require("../models/Product");
 
 //CREATE
-router.post("/", verifyTokenAndAdmin, async (req, res) => {
+router.post("/add", verifyTokenAndAdmin, async (req, res) => {
   const newProduct = new Product(req.body);
 
   try {
@@ -18,9 +18,9 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //UPDATE
-router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
+router.put("/update/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
-    const updatedProduct = await User.findByIdAndUpdate(
+    const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
@@ -44,7 +44,7 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
 });
 
 //GET PRODUCT
-router.get("/find/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
     res.status(200).json(product);

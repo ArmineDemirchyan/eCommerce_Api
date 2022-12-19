@@ -8,7 +8,7 @@ const User = require("../models/User");
 const router = require("express").Router();
 
 //UPDATE
-router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
+router.put("/update/:id", verifyTokenAndAuthorization, async (req, res) => {
   if (req.body.password) {
     req.body.password = CryptoJS.AES.encrypt(
       req.body.password,
@@ -57,7 +57,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
   const query = req.query.new;
   try {
     const users = query
-      ? await User.find().select("-password").sort({ _id: -1 }).limit(1)
+      ? await User.find().select("-password").sort({ _id: -1 }).limit(5)
       : await User.find().select("-password");
     res.status(200).json(users);
   } catch (error) {
