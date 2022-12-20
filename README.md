@@ -5,7 +5,6 @@
 In this project you will find solutions for tasks mentioned above using node js,express js,MongoDB with mongoose ORM, JWT and Stripe payment method.
 This project was built to help you start express/mongo API with a boilerplate which is fully ready for most of the basic back end tasks such as authorization, authentication and CRUD
 
-
 ## Features
 
 - User registration and login
@@ -17,33 +16,33 @@ This project was built to help you start express/mongo API with a boilerplate wh
 
 | Feature          |  Coded?  | Description                            |
 | ---------------- | :------: | :------------------------------------- |
-| Add a Product    | &#10004; | Ability of Add a Product on the System |
-| List Products    | &#10004; | Ability of List Products               |
-| Edit a Product   | &#10004; | Ability of Edit a Product              |
-| Delete a Product | &#10004; | Ability of Delete a Product            |
-| Stock            | &#10004; | Ability of Update the Stock            |
-| Stock History    | &#10004; | Ability to see the Stock History       |
+| Add a Product    | &#10004; | Ability to Add a Product on the System |
+| List Products    | &#10004; | Ability to List Products               |
+| Edit a Product   | &#10004; | Ability to Edit a Product              |
+| Delete a Product | &#10004; | Ability to Delete a Product            |
+| Stock            | &#10004; | Ability to Update the Stock            |
+| Stock History    | &#10004; | Ability to view the Stock History       |
 
 <b>Purchase Features</b>
 
 | Feature        |  Coded?  | Description                             |
 | -------------- | :------: | :-------------------------------------- |
-| Create a Cart  | &#10004; | Ability of Create a new Cart            |
-| See Cart       | &#10004; | Ability to see the Cart and it items    |
-| Remove a Cart  | &#10004; | Ability of Remove a Cart                |
-| Add Item       | &#10004; | Ability of add a new Item on the Cart   |
-| Remove an Item | &#10004; | Ability of Remove an Item from the Cart |
+| Create a Cart  | &#10004; | Ability to Create a new Cart            |
+| View Cart       | &#10004; | Ability to view the Cart and it items    |
+| Remove a Cart  | &#10004; | Ability to Remove a Cart                |
+| Add Item       | &#10004; | Ability to add a new Item on the Cart   |
+| Remove an Item | &#10004; | Ability to Remove an Item from the Cart |
 | Checkout       | &#10004; | Ability to Checkout                     |
 
 <b>User Features</b>
 
 | Feature         |  Coded?  | Description                                 |
 | --------------- | :------: | :------------------------------------------ |
-| Create a User   | &#10004; | Ability of Create a new User                |
-| See All Users   | &#10004; | Ability to see all the Users and their data |
-| See Single User | &#10004; | Ability to see the User and his/her data    |
-| Remove the User | &#10004; | Ability of Remove the User                  |
-| Update the User | &#10004; | Ability of update the User's data           |
+| Create a User   | &#10004; | Ability to Create a new User                |
+| View All Users   | &#10004; | Ability to view all the Users and their data |
+| View Single User | &#10004; | Ability to view the User and his/her data    |
+| Remove the User | &#10004; | Ability to Remove the User                  |
+| Update the User | &#10004; | Ability to update the User's data           |
 
 ## Installing
 
@@ -159,14 +158,14 @@ nodemon server.js
 
 | Name     | Type     | Required | Unique | Default |
 | -------- | -------- | -------- | ------ | ------- |
-| userId   | `String` | `true`   | -      | -       |
+| userId   | `String` | `true`   | `true` | -       |
 | products | `Array`  | -        | -      | -       |
 
 ### Cart:
 
 | Name     | Type     | Required | Unique | Default   |
 | -------- | -------- | -------- | ------ | --------- |
-| userId   | `String` | `true`   | -      | -         |
+| userId   | `String` | `true`   | `true` | -         |
 | products | `Array`  | -        | -      | -         |
 | amount   | `Number` | `true`   | -      | -         |
 | address  | `Object` | `true`   | -      | -         |
